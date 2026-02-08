@@ -1,0 +1,23 @@
+body {
+  font-family: inter;
+  background-color: #eee;
+}
+
+.commit {
+  background-color: white;
+  border: 0.0625rem solid black;
+  border-radius: 0.5rem;
+}
+
+.commit-head {
+  padding: 1rem;
+  border-bottom: 0.0625rem solid black;
+}
+
+.commit-body {
+  padding: 1rem;
+}
+
+ol {
+  margin-left: 1.25rem;
+}
