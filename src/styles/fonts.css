@@ -11,3 +11,17 @@
   font-weight: 700;
   src: url("../assets/fonts/Inter-Bold.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "roboto-mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/RobotoMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "roboto-mono";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/RobotoMono-Bold.ttf") format("truetype");
+}
