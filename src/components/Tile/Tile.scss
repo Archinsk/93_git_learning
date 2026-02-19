@@ -1,0 +1,26 @@
+$tile-bg-color: hsla(0, 0%, 100%, 1);
+$tile-color: inherit;
+$tile-padding-y: 1rem;
+$tile-padding-x: 1rem;
+$tile-border-radius: 0.5rem;
+$tile-border-width: 0.0625rem;
+$tile-border-style: solid;
+$tile-border-color: hsla(0, 0%, 30%, 1);
+
+.tile {
+  --tile-bg-color: #{$tile-bg-color};
+  --tile-color: #{$tile-color};
+  --tile-padding-y: #{$tile-padding-y};
+  --tile-padding-x: #{$tile-padding-x};
+  --tile-border-radius: #{$tile-border-radius};
+  --tile-border-width: #{$tile-border-width};
+  --tile-border-style: #{$tile-border-style};
+  --tile-border-color: #{$tile-border-color};
+
+  background-color: var(--tile-bg-color);
+  color: var(--tile-color);
+  padding: var(--tile-padding-y) var(--tile-padding-x);
+  border-radius: var(--tile-border-radius);
+  border: var(--tile-border-width) var(--tile-border-style)
+    var(--tile-border-color);
+}

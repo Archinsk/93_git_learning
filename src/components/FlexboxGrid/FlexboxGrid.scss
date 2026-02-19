@@ -1,0 +1,58 @@
+$grid-row-gap: 1rem;
+$grid-column-gap: 1rem;
+$grid-columns: 12 !default;
+$spacer: 1rem !default;
+$gaps: (
+  "0": 0rem,
+  "1-8": $spacer * 0.125,
+  "1-4": $spacer * 0.25,
+  "1-2": $spacer * 0.5,
+  "3-4": $spacer * 0.75,
+  "1": $spacer,
+  "5-4": $spacer * 1.25,
+  "3-2": $spacer * 1.5,
+  "2": $spacer * 2,
+);
+
+.flexbox-grid {
+  --grid-column-gap: #{$grid-column-gap};
+  --grid-row-gap: #{$grid-row-gap};
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--grid-column-gap);
+  row-gap: var(--grid-row-gap);
+
+  > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.flexbox-grid-cols-auto > * {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@if $grid-columns > 0 {
+  @for $i from 1 through $grid-columns {
+    .flexbox-grid-cols-#{$i} > * {
+      flex: 0 0 auto;
+      width: calc(
+        ((100% + var(--grid-column-gap)) / $i) - var(--grid-column-gap)
+      );
+    }
+  }
+}
+
+@each $key, $value in $gaps {
+  .gap-#{$key},
+  .column-gap-#{$key} {
+    --grid-column-gap: #{$value};
+  }
+
+  .gap-#{$key},
+  .row-gap-#{$key} {
+    --grid-row-gap: #{$value};
+  }
+}

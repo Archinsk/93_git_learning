@@ -1,0 +1,48 @@
+$grid-column-gap: 1rem;
+$grid-columns: 12 !default;
+
+.flexbox-col {
+  flex: 1 0 0;
+}
+
+.flexbox-col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@if $grid-columns > 0 {
+  @for $i from 1 through $grid-columns {
+    .flexbox-col-#{$i}-#{$grid-columns} {
+      --grid-columns: #{$grid-columns};
+      --grid-column-gap: #{$grid-column-gap};
+      flex: 0 0 auto;
+      width: calc(
+        ((100% + var(--grid-column-gap)) / var(--grid-columns)) *
+          $i -
+          var(--grid-column-gap)
+      );
+    }
+  }
+
+  @for $i from 0 through ($grid-columns - 1) {
+    @if not($i == 0) {
+      .offset-#{$i} {
+        --grid-columns: #{$grid-columns};
+        --grid-column-gap: #{$grid-column-gap};
+        $col: calc((100% + var(--grid-column-gap)) / $grid-columns);
+        margin-left: if(
+          $i == 0,
+          0,
+          calc((100% + var(--grid-column-gap)) / var(--grid-columns) * $i)
+        );
+      }
+    }
+  }
+}
+
+@for $i from 1 through $grid-columns {
+  :not(.flexbox-grid) > .flexbox-col-#{$i}-#{$grid-columns} {
+    --grid-column-gap: 0rem;
+    --grid-row-gap: 0rem;
+  }
+}

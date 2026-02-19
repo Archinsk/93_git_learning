@@ -1,20 +1,21 @@
 body {
   font-family: inter;
   background-color: hsl(0, 0%, 95%);
-  color: hsl(0, 0%, 15%);
+  color: hsla(0, 0%, 15%, 1);
   font-size: 1rem;
   line-height: 1.5;
+  padding: 1rem;
 }
 
 .commit {
   background-color: white;
-  border: 0.0625rem solid hsl(0, 0%, 30%);
+  border: 0.0625rem solid hsla(0, 0%, 30%, 1);
   border-radius: 0.5rem;
 }
 
 .commit-head {
   padding: 1rem;
-  border-bottom: 0.0625rem solid hsl(0, 0%, 30%);
+  border-bottom: 0.0625rem solid hsla(0, 0%, 30%, 1);
 }
 
 .commit-body {
@@ -26,8 +27,8 @@ ol {
 }
 
 code {
-  background-color: hsl(0, 0%, 95%);
-  color: hsl(0, 0%, 30%);
+  background-color: hsla(0, 0%, 95%, 1);
+  color: hsla(0, 0%, 30%, 1);
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   border-radius: 0.25rem;
