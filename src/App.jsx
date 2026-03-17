@@ -191,6 +191,13 @@ function App() {
                 <li>Стилизованы плитки и заголовки h1-h6</li>
               </ol>
             </Tile>
+            <Tile>
+              <h3>Tag added</h3>
+              <ol>
+                <li>Добавлен конспект о тегировании</li>
+                <li>Добавлен тег "v0.5"</li>
+              </ol>
+            </Tile>
           </FlexboxGrid>
         </FlexboxCol>
         <FlexboxCol span={3}>
@@ -366,6 +373,71 @@ function App() {
             </Tile>
             <Tile>
               <h3>Удаленное хранилище</h3>
+              <div>
+                <div>
+                  <code>git remote</code>
+                </div>
+                <div>просмотр списка удаленных репозиториев</div>
+              </div>
+              <div>
+                <div>
+                  <code>git remote -v</code>
+                </div>
+                <div>
+                  просмотр списка удаленных репозиториев с указанием адресов
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>
+                    git remote add pb https://github.com/paulboone/ticgit
+                  </code>
+                </div>
+                <div>добавление удаленного репозитория</div>
+              </div>
+              <div>
+                <div>
+                  <code>git fetch origin</code>
+                </div>
+                <div>
+                  получение данных из удаленного репозитория (без слияния)
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git pull</code>
+                </div>
+                <div>
+                  получение данных из удаленного репозитория (со слияниянием в
+                  текущую локальную ветку)
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git pull</code>
+                </div>
+                <div>
+                  отправка изменений в удаленный репозиторий с указанием ветки
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git remote show origin</code>
+                </div>
+                <div>просмотр информации об удаленном репозитории</div>
+              </div>
+              <div>
+                <div>
+                  <code>git remote rename pb paul</code>
+                </div>
+                <div>переименование удаленного репозитория</div>
+              </div>
+              <div>
+                <div>
+                  <code>git remote remove paul</code>
+                </div>
+                <div>удаление удаленного репозитория</div>
+              </div>
             </Tile>
             <Tile>
               <h3>Коммиты</h3>
@@ -423,6 +495,215 @@ function App() {
                 </div>
                 <div>переименование файла</div>
               </div>
+              <div>
+                <div>
+                  <code>git log</code>
+                </div>
+                <div>просмотр истории коммитов</div>
+              </div>
+              <div>
+                <div>
+                  <code>git log --stat</code>
+                </div>
+                <div>
+                  просмотр истории коммитов со списком измененных файлов
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git log -2</code>
+                </div>
+                <div>
+                  просмотр истории коммитов, ограниченный двумя последними
+                  записями
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git log --patch</code>
+                </div>
+                <div>
+                  просмотр истории коммитов c указанием измененных фрагменов
+                  кода
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git log -p</code>
+                </div>
+                <div>
+                  просмотр истории коммитов c указанием измененных фрагменов
+                  кода
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git log --pretty=short</code>
+                </div>
+                <div>
+                  просмотр истории коммитов с отображением сокращенной
+                  информации
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git log --pretty=fuller</code>
+                </div>
+                <div>
+                  просмотр истории коммитов с отображением более полной
+                  информации
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git log --pretty=oneline</code>
+                </div>
+                <div>
+                  просмотр истории коммитов с отображением информации о коммите
+                  одной строкой
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git log --graph</code>
+                </div>
+                <div>просмотр истории коммитов в виде схемы</div>
+              </div>
+              <div>
+                <div>
+                  <code>git log --pretty=format:"%h - %an, %ar : %s"</code>
+                </div>
+                <div>просмотр истории коммитов в заданном формате</div>
+              </div>
+              <div>
+                <div>
+                  <code>git log --name-status</code>
+                </div>
+                <div>
+                  просмотр истории коммитов со списком
+                  добавленных/измененных/удаленных файлов
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git log -- src/assets/fonts</code>
+                </div>
+                <div>
+                  просмотр истории коммитов, которые затрагивали указанную
+                  директорию
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git commit --amend</code>
+                </div>
+                <div>замена последнего коммита</div>
+              </div>
+              <div>
+                <div>
+                  <code>git reset HEAD README.md</code>
+                </div>
+                <div>
+                  исключение файла из списка индексируемых (добавляемых к
+                  коммиту)
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git checkout -- README.md</code>
+                </div>
+                <div>
+                  замена отредактированного файла на его версию из последнего
+                  коммита
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git restore --staged README.md</code>
+                </div>
+                <div>
+                  исключение файла из списка индексируемых (добавляемых к
+                  коммиту)
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git restore README.md</code>
+                </div>
+                <div>
+                  замена отредактированного файла на его версию из последнего
+                  коммита
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git tag</code>
+                </div>
+                <div>просмотр списка тегов</div>
+              </div>
+              <div>
+                <div>
+                  <code>git tag --list "v2.2*"</code>
+                </div>
+                <div>просмотр списка тегов с фильтрацией по шаблону</div>
+              </div>
+              <div>
+                <div>
+                  <code>git tag -l "v2.2*"</code>
+                </div>
+                <div>
+                  просмотр списка тегов с фильтрацией по шаблону (сокращенная
+                  запись)
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git tag -a v0.5 -m "Версия 0.5"</code>
+                </div>
+                <div>создание аннотированного тега</div>
+              </div>
+              <div>
+                <div>
+                  <code>git tag v0.5_26.03.16</code>
+                </div>
+                <div>создание легковесного тега</div>
+              </div>
+              <div>
+                <div>
+                  <code>git show v0.5</code>
+                </div>
+                <div>просмотр информации тега</div>
+              </div>
+              <div>
+                <div>
+                  <code>git tag -a v0.1 2924a4b</code>
+                </div>
+                <div>тегирование старого коммита</div>
+              </div>
+              <div>
+                <div>
+                  <code>git push origin v0.5</code>
+                </div>
+                <div>отправка одного тега в удаленный репозиторий</div>
+              </div>
+              <div>
+                <div>
+                  <code>git push origin --tags</code>
+                </div>
+                <div>отправка тега в удаленный репозиторий</div>
+              </div>
+              <div>
+                <div>
+                  <code>git tag -d v0.5_26.03.16</code>
+                </div>
+                <div>удаление тега из локального репозитория</div>
+              </div>
+              <div>
+                <div>
+                  <code>git push origin --delete v0.5_26.03.16</code>
+                </div>
+                <div>удаление тега из удаленного репозитория</div>
+              </div>
             </Tile>
             <Tile>
               <h3>добавление и удаление</h3>
@@ -447,6 +728,7 @@ function App() {
                 Файл .gitignore созданный в корне проекта может содержать
                 исключения для отслеживания и исключений из исключений
               </div>
+              <div>Теги бывают легковесными и аннотированными</div>
             </Tile>
             <Tile>
               <h3>Текущий пункт</h3>
@@ -456,7 +738,7 @@ function App() {
               </div>
               <div>
                 <div>Место остановки</div>
-                <div>2.3 Основы Git - Просмотр истории коммитов</div>
+                <div>2.7 Основы Git - Псевдонимы в Git</div>
               </div>
             </Tile>
           </FlexboxGrid>
