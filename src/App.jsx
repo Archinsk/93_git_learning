@@ -198,6 +198,12 @@ function App() {
                 <li>Добавлен тег "v0.5"</li>
               </ol>
             </Tile>
+            <Tile>
+              <h3>Alias added</h3>
+              <ol>
+                <li>Добавлен конспект о псевдонимах</li>
+              </ol>
+            </Tile>
           </FlexboxGrid>
         </FlexboxCol>
         <FlexboxCol span={3}>
@@ -263,6 +269,20 @@ function App() {
                   <code>git config --list</code>
                 </div>
                 <div>просмотр настроек</div>
+              </div>
+              <div>
+                <div>
+                  <code>git config --global alias.last 'log -1 HEAD'</code>
+                </div>
+                <div>установка псевдонима для команды Git</div>
+              </div>
+              <div>
+                <div>
+                  <code>git last</code>
+                </div>
+                <div>
+                  исполнение команды git по ранее настроенному псевдониму
+                </div>
               </div>
             </Tile>
             <Tile>
@@ -738,7 +758,7 @@ function App() {
               </div>
               <div>
                 <div>Место остановки</div>
-                <div>2.7 Основы Git - Псевдонимы в Git</div>
+                <div>3.1 Ветвление в Git - О ветвлении в двух словах</div>
               </div>
             </Tile>
           </FlexboxGrid>
