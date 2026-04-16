@@ -204,6 +204,12 @@ function App() {
                 <li>Добавлен конспект о псевдонимах</li>
               </ol>
             </Tile>
+            <Tile>
+              <h3>Branching started</h3>
+              <ol>
+                <li>Добавлен конспект первых глав о ветвлении</li>
+              </ol>
+            </Tile>
           </FlexboxGrid>
         </FlexboxCol>
         <FlexboxCol span={3}>
@@ -519,7 +525,19 @@ function App() {
                 <div>
                   <code>git log</code>
                 </div>
-                <div>просмотр истории коммитов</div>
+                <div>просмотр истории коммитов текущей ветки</div>
+              </div>
+              <div>
+                <div>
+                  <code>git log testing</code>
+                </div>
+                <div>просмотр истории коммитов ветки "testing"</div>
+              </div>
+              <div>
+                <div>
+                  <code>git log --all</code>
+                </div>
+                <div>просмотр истории коммитов по всем веткам</div>
               </div>
               <div>
                 <div>
@@ -726,7 +744,7 @@ function App() {
               </div>
             </Tile>
             <Tile>
-              <h3>добавление и удаление</h3>
+              <h3>Добавление и удаление</h3>
               <div>
                 <div>
                   <code>git add README.md</code>
@@ -735,6 +753,86 @@ function App() {
                   добавление файла в список отслеживаемых git'ом и к следующему
                   коммиту
                 </div>
+              </div>
+            </Tile>
+            <Tile>
+              <h3>Ветвление</h3>
+              <div>
+                <div>
+                  <code>git branch testing</code>
+                </div>
+                <div>создание новой ветки "testing"</div>
+              </div>
+              <div>
+                <div>
+                  <code>git checkout testing</code>
+                </div>
+                <div>
+                  переключение с текущей ветки на ветку "testing" (перемещение
+                  указателя HEAD на ветку "testing")
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git checkout -b testing</code>
+                </div>
+                <div>
+                  одновременное создание и переключение на ветку "testing"
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git switch testing</code>
+                </div>
+                <div>
+                  переключение с текущей ветки на ветку "testing" (перемещение
+                  указателя HEAD на ветку "testing")
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git switch -c testing</code>
+                </div>
+                <div>
+                  одновременное создание и переключение на ветку "testing"
+                </div>
+              </div>
+              <div>
+                <div>
+                  <code>git checkout -</code>
+                </div>
+                <div>возврат к предыдущей извлеченной ветке</div>
+              </div>
+              <div>
+                <div>
+                  <code>git switch -</code>
+                </div>
+                <div>возврат к предыдущей извлеченной ветке</div>
+              </div>
+
+              <div>
+                <div>
+                  <code>git merge hotfix</code>
+                </div>
+                <div>Слияние ветки "hotfix" с текущей веткой</div>
+              </div>
+              <div>
+                <div>
+                  <code>git branch -d hotfix</code>
+                </div>
+                <div>удаление слитой ветки "hotfix"</div>
+              </div>
+              <div>
+                <div>
+                  <code>git mergetool</code>
+                </div>
+                <div>запуск графического инструмента разрешения конфликтов</div>
+              </div>
+              <div>
+                <div>
+                  <code></code>
+                </div>
+                <div></div>
               </div>
             </Tile>
             <Tile>
@@ -749,6 +847,15 @@ function App() {
                 исключения для отслеживания и исключений из исключений
               </div>
               <div>Теги бывают легковесными и аннотированными</div>
+              <div>
+                fast-forward означает, что при слиянии переместился только
+                указатель HEAD? т.к. при слиянии веток нет разнонаправленных
+                изменений
+              </div>
+              <div>
+                После решения конфликтов слияния нужно добавить файлы в индекс и
+                выполнить коммит
+              </div>
             </Tile>
             <Tile>
               <h3>Текущий пункт</h3>
@@ -758,7 +865,7 @@ function App() {
               </div>
               <div>
                 <div>Место остановки</div>
-                <div>3.1 Ветвление в Git - О ветвлении в двух словах</div>
+                <div>3.3 Ветвление в Git - Управление ветками</div>
               </div>
             </Tile>
           </FlexboxGrid>
